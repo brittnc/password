@@ -11,11 +11,13 @@ window.onload = alert("Please click 'Generate Password' to begin!");
 //Write password to the #password input
 function writePassword() {
     var passwordText = document.querySelector("#password");
+//How many chars
     var userChoice = window.prompt("How many charaters? Choose between 8-128.")
+//Error message
     if(userChoice <8 || userChoice > 128){
          window.prompt("Password must be between 8-128 characters! Please choose between 8-128.");
         };
-
+//How lower,upper,special chars
     var lowerCaseChoice = confirm("Would you like lower case?")
     var upperCaseChoice = confirm("Would you like upper case?")
     var specialCaseChoice = confirm("Would you like special charaters?")
@@ -35,6 +37,7 @@ function writePassword() {
     if(specialCaseChoice === true){
         userChoiceArray = userChoiceArray.concat(specialCase)
     }
+//Randomizer 
     var password = []
     for(var i = 0; i < userChoice; i++){
         var randomIndex = Math.floor(Math.random() * userChoiceArray.length)
