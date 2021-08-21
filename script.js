@@ -5,11 +5,17 @@ var upperCase = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P'
 var specialCase = ['!','@','#','$','%','&','*','?','/','+','='];
 var userChoiceArray=[];
 
+//To begin prompt
+window.onload = alert("Please click 'Generate Password' to begin!");
 
 //Write password to the #password input
 function writePassword() {
     var passwordText = document.querySelector("#password");
     var userChoice = window.prompt("How many charaters? Choose between 8-128.")
+    if(userChoice <8 || userChoice > 128){
+         window.prompt("Password must be between 8-128 characters! Please choose between 8-128.");
+        };
+
     var lowerCaseChoice = confirm("Would you like lower case?")
     var upperCaseChoice = confirm("Would you like upper case?")
     var specialCaseChoice = confirm("Would you like special charaters?")
