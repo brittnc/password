@@ -16,8 +16,9 @@ function writePassword() {
     var userChoice = window.prompt("How many charaters? Choose between 8-128.")
 //Error message if not 8-128 chars
     if(userChoice <8 || userChoice > 128){
-         window.prompt("Password must be between 8-128 characters! Please choose between 8-128.");
+         window.prompt("Password must be between 8-128 characters!\nPlease exit application and restart. ")
         };
+
 //Would you like lower,upper,special chars?
     var lowerCaseChoice = confirm("Would you like lower case?")
     var upperCaseChoice = confirm("Would you like upper case?")
